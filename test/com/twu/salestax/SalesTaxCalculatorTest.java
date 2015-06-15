@@ -8,6 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -33,7 +34,9 @@ public class SalesTaxCalculatorTest {
         exemptionalItemsList.add("chocolate");
         exemptionalItemsList.add("food");
         exemptionalItemsList.add("medicine");
-        SalesTaxCalculator salesTaxProblem = new SalesTaxCalculator(new ExemptionItems(exemptionalItemsList));
+        Scanner inputReader = new Scanner(System.in);
+        IOModule ioModule = new IOModule(inputReader, System.out);
+        SalesTaxCalculator salesTaxProblem = new SalesTaxCalculator(new ExemptionItems(exemptionalItemsList), ioModule);
 
         salesTaxProblem.printReceipt();
 

@@ -3,6 +3,7 @@ package com.twu.salestax;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+// This is a Utility class with Parsing & Number Rounding & ArrayToString & isImported? methods
 public class Util {
 
     public static double calculateTax(double amount, int taxPercentage) {

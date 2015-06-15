@@ -2,6 +2,7 @@ package com.twu.salestax;
 
 import java.util.ArrayList;
 
+// This class will hold the Exemption items list And Has a method to check wether an item is exemptional or not
 public class ExemptionItems {
     private ArrayList<String> exemptionalItems;
 
