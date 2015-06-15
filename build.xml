@@ -40,7 +40,7 @@
 
   <target name="jar" depends="test">
     <mkdir dir="out/jar"/>
-    <jar destfile="out/jar/Biblioteca.jar" basedir="out/src/classes">
+    <jar destfile="out/jar/SalesTax.jar" basedir="out/src/classes">
       <manifest>
         <attribute name="Main-Class" value="com.twu.salestax.EntryPoint"/>
       </manifest>
