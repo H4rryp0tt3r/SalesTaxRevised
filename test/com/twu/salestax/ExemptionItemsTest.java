@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -23,7 +24,13 @@ public class ExemptionItemsTest {
 
     @Test
     public void shouldBeAbleToFindExemptionalItems() {
-        ExemptionItems items = new ExemptionItems();
+        ArrayList<String> exemptionalItemsList = new ArrayList<>();
+        exemptionalItemsList.add("book");
+        exemptionalItemsList.add("pill");
+        exemptionalItemsList.add("chocolate");
+        exemptionalItemsList.add("food");
+        exemptionalItemsList.add("medicine");
+        ExemptionItems items = new ExemptionItems(exemptionalItemsList);
 
         Boolean actualResult = items.isExemptionalItem("packet of headache pills");
 

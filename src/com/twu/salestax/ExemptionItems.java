@@ -5,13 +5,8 @@ import java.util.ArrayList;
 public class ExemptionItems {
     private ArrayList<String> exemptionalItems;
 
-    public ExemptionItems() {
-        exemptionalItems = new ArrayList<>();
-        exemptionalItems.add("book");
-        exemptionalItems.add("pill");
-        exemptionalItems.add("chocolate");
-        exemptionalItems.add("food");
-        exemptionalItems.add("medicine");
+    public ExemptionItems(ArrayList<String> exemptionalItems) {
+        this.exemptionalItems = exemptionalItems;
     }
 
     public Boolean isExemptionalItem(String itemName) {

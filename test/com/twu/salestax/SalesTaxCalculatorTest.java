@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -26,7 +27,13 @@ public class SalesTaxCalculatorTest {
 
     @Test
     public void shouldBeAbleToPrintFinalReceiptWithTaxDetails() {
-        SalesTaxCalculator salesTaxProblem = new SalesTaxCalculator(new ExemptionItems());
+        ArrayList<String> exemptionalItemsList = new ArrayList<>();
+        exemptionalItemsList.add("book");
+        exemptionalItemsList.add("pill");
+        exemptionalItemsList.add("chocolate");
+        exemptionalItemsList.add("food");
+        exemptionalItemsList.add("medicine");
+        SalesTaxCalculator salesTaxProblem = new SalesTaxCalculator(new ExemptionItems(exemptionalItemsList));
 
         salesTaxProblem.printReceipt();
 
