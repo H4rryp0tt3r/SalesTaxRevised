@@ -1,5 +1,6 @@
 package com.twu.salestax;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Util {
@@ -31,5 +32,10 @@ public class Util {
         if (itemName.contains("imported"))
             return true;
         return false;
+    }
+
+    public static String round(Double number) {
+        DecimalFormat formatter = new DecimalFormat("#0.00");
+        return formatter.format(number);
     }
 }

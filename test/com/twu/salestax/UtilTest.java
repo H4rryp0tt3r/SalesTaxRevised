@@ -48,6 +48,13 @@ public class UtilTest {
         assertThat(actualResult, is(true));
     }
 
+    @Test
+    public void shouldBeAbleToRoundTheGivenDoubleToTwoDecimalPoints() {
+        String actualResult = Util.round(1.85234);
+
+        assertThat(actualResult, is("1.85"));
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(null);
