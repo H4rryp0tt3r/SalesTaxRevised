@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -26,6 +27,18 @@ public class UtilTest {
         double actualResult = Util.calculateTax(14.99, 10);
 
         assertThat(actualResult, is(1.5));
+    }
+
+    @Test
+    public void shouldBeAbleToParseGivenStringIntoRequiredFormat() {
+        ArrayList<String> expectedList = new ArrayList<>();
+        expectedList.add("1");
+        expectedList.add("imported music CD Box");
+        expectedList.add("14.99");
+
+        ArrayList<String> actualList = Util.parseString("1 imported music CD Box at 14.99");
+
+        assertThat(actualList, is(expectedList));
     }
 
     @After
