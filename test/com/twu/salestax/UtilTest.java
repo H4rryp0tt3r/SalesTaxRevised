@@ -41,6 +41,13 @@ public class UtilTest {
         assertThat(actualList, is(expectedList));
     }
 
+    @Test
+    public void shouldBeAbleToIdentifyImportedItems() {
+        Boolean actualResult = Util.isImported("1 packet of imported headache pills at 9.75");
+
+        assertThat(actualResult, is(true));
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(null);

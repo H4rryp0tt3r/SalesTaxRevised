@@ -26,4 +26,10 @@ public class Util {
         }
         return resultData.replaceAll("\\s+$", "");
     }
+
+    public static Boolean isImported(String itemName) {
+        if (itemName.contains("imported"))
+            return true;
+        return false;
+    }
 }
